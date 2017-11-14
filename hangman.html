@@ -8,13 +8,19 @@
     <title>Title</title>
     <header>
         <h1 align="center">Hangman</h1>
+    </header>
 </head>
-<body>
+<body onload="setUpVars()">
 Your Guess:
 <input type="text" id="guess" value="" size="1" maxlength="1">
 <button id ="submit" onclick="startGame()"> Guess Letter</button>
-
-
+<div id ="underscore"></div>
+<div id ="underscore1"></div>
+<div id ="underscore2"></div>
+<div id ="underscore3"></div>
+<div id ="underscore4"></div>
+<div id ="underscore5"></div>
+<div id="word"></div>
 
 </body>
 </html>
