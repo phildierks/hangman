@@ -1,3 +1,7 @@
 hangman {
     align-items:center;font-size: 100px;
 }
+#underscore div{
+    display: inline;
+    font-size: 30px;
+}
