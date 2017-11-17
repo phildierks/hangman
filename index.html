@@ -10,14 +10,15 @@
         <h1 align="center">Hangman</h1>
     </header>
 </head>
+
 <body onload="setUpVars()">
 Your Guess:
+
 <input type="text" id="guess" value="" size="1" maxlength="1">
 <button id="startGame" onclick="startGame()">Start Game!</button>
 <button id ="guessLetter" onclick="printWord()"> Guess Letter</button>
 
 <div id ="underscore"></div>
-<div id="word"></div>
-
+<div id="tryAgain"></div>
 </body>
 </html>

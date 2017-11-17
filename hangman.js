@@ -7,26 +7,39 @@ function setUpVars() {
 
 }
 
-
 function startGame(){
+
     document.getElementById("underscore").innerHTML = "";
+
     word = words[Math.floor(Math.random() * words.length)];
+    var displayedLetters = "";
     for(var i = 0; i < word.length; i++){
-        document.getElementById("underscore").innerHTML += "<div>_ </div>";
+         displayedLetters += "_ ";
     }
-}
+    document.getElementById("underscore").innerHTML = displayedLetters;
+    console.log(word);
+ }
 
 function printWord(){
- var r = "";
+    guess = document.getElementById("guess").value;
+guessedletters.push(guess);
+ var displayedGuess = "";
 for(var i = 0; i < word.length; i++){
     if(guessedletters.indexOf(word[i]) > -1){
-        r += word[i];
+        displayedGuess += word[i];
+
     }else{
-        r += "_";
+        displayedGuess += "_ ";
     }
-    document.getElementById("guessLetter").innerHTML = printWord();
+
 }
+document.getElementById("underscore").innerHTML = displayedGuess;
+    if(){
+        document.getElementById("tryAgain").innerHTML= "wrong!"
+    }
+
 }
+
 function handleGuess(){
 
 }
