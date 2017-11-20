@@ -6,7 +6,7 @@ function setUpVars() {
     schoolSupplies = ["pencil","paper","eraser","divider","binder","calculator","highlighter"];
     guess = document.getElementById("guess").value;
     document.getElementById("guessLetter").disabled = true;
-
+    possibleLetters = ["a","b","c","d","e","f","g","h","i","j","k","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 }
 
 
@@ -22,7 +22,7 @@ function enableGuess(){
 
 
 function startGame(){
-    document.getElementById("hangmanPic").innerHTML ="<img src=img/hangman7.png/>";
+    document.getElementById("hangmanPic").innerHTML ="<img src='img/hangman7.png'/>";
     guessesLeft = 6;
     document.getElementById("wrongLetter").innerHTML="";
     document.getElementById("win?").innerHTML="";
@@ -54,6 +54,15 @@ function printWord() {
     guess = document.getElementById("guess").value;
     guess = guess.toLowerCase();
     guessedletters.push(guess);
+    var inLetterList = false;
+    for(var i = 0; i < possibleLetters.length; i++){
+        if(guess == possibleLetters[i]){
+            inLetterList = true;
+        }
+    }
+    if(!inLetterList) {
+        document.getElementById("wrongLetter").innerHTML = "You can only enter letters.";
+    }
 
         var displayedGuess = "";
         for (var i = 0; i < word.length; i++) {
@@ -66,6 +75,7 @@ function printWord() {
         }
         document.getElementById("displayedWord").innerHTML = displayedGuess ;
     guesses();
+    document.getElementById("guessedLetters").innerHTML  += guess + ", ";
     if(word == displayedGuess){
         document.getElementById("win?").innerHTML = "You win! The word was:" + word +  ". Press Start Game to play again!";
         document.getElementById("category").disabled = false;
@@ -80,7 +90,7 @@ function printWord() {
 function guesses(){
     if((word.indexOf(guess) == -1)){
         guessesLeft--;
-        document.getElementById("wrongLetter").innerHTML = "Guesses Left: " + guessesLeft;
+        document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
     }
 
     if(guessesLeft==0){

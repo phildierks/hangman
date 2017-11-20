@@ -4,3 +4,6 @@
 #displayedWord {
     font-size: 40px;
 }
+#guessedLetters{
+    display: inline;
+}
