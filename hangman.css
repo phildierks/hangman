@@ -1,6 +1,6 @@
 #hangman {
     align-items:center;font-size: 100px;
 }
-#underscore {
+#displayedWord {
     font-size: 40px;
 }
