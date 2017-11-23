@@ -20,14 +20,14 @@
     <option value="2"> Animals</option>
     <option value="3">School Supplies</option>
 </select>
-<button id="startGame" onclick="startGame();enableGuess();clearGuesses()">Start Game!</button>
-Your Guess:
-<input type="text" id="guess" value="" size="1" maxlength="1">
-<button id ="guessLetter" onclick="printWord();clearFields()"> Guess Letter</button>
+<button id="startGame" onclick="startGame()">Start Game!</button>
+Your Guess: <select id="guess"></select>
+<button id ="guessLetter" onclick="printWord()"> Guess Letter </button>
 <div id ="displayedWord"></div>
 <div id="guessedLetters">
-<div id="wrongLetter"></div>
-    <div id ="guessesLeft"></div>
-<div id="win?"></div>
+    <p id="guessedLetter">Guessed Letters: </p>
+</div>
+<div id ="guessesLeft"></div>
+<div id="win"></div>
 </body>
 </html>

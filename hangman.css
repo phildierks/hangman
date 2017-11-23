@@ -1,9 +1,12 @@
-#hangman {
-    align-items:center;font-size: 100px;
-}
 #displayedWord {
-    font-size: 40px;
+    font-size: 60px;
 }
 #guessedLetters{
-    display: inline;
+    font-size: 40px;
+}
+#guessesLeft{
+    font-size: 40px;
+}
+#win{
+    font-size: 40px;
 }
