@@ -10,3 +10,8 @@
 #win{
     font-size: 40px;
 }
+body{
+    background-image: url("https://openclipart.org/download/263282/WoodenBackground.svg");
+    text-align: center;
+    color: yellow;
+}
